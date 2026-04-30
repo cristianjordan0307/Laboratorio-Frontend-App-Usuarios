@@ -2,12 +2,12 @@
 
 import { FormEvent, useState } from "react";
 import { Save, X } from "lucide-react";
-import type { User, UserPayload } from "@/types/user";
+import type { User, UserPayLoad } from "@/types/user";
 
 type UserFormProps = {
   selectedUser: User | null;
   isSaving: boolean;
-  onSave: (payload: UserPayload) => Promise<{ ok: boolean; message: string }>;
+  onSave: (payload: UserPayLoad) => Promise<{ ok: boolean; message: string }>;
   onCancel: () => void;
 };
 
