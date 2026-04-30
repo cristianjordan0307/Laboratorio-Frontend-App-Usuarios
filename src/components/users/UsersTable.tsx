@@ -6,6 +6,7 @@ import type { User } from "@/types/user";
 type UsersTableProps = {
   users: User[];
   isLoading: boolean;
+  onRefresh: () => Promise<void>; 
   onEdit: (user: User) => void;
   onDelete: (id: number) => void;
 };
@@ -13,6 +14,7 @@ type UsersTableProps = {
 export function UsersTable({
   users,
   isLoading,
+  onRefresh,
   onEdit,
   onDelete,
 }: UsersTableProps) {
